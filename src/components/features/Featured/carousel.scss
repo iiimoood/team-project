@@ -1,0 +1,47 @@
+@import "../../../styles/settings.scss";
+
+.carouselContainer {
+  height: 100%;
+  div {
+    a {
+      width: 50%;
+      top: unset;
+      opacity: 1;
+      height: 50px;
+      a {
+        width: 100%;
+        background-color: $featured-carousel-button-bg;
+        line-height: 40px;
+      }
+    }
+  }
+  > div {
+    height: 100%;
+  }
+  .carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.25s !important;
+  }
+
+  .active {
+    opacity: 1 !important;
+    transition: opacity 1s !important;
+  }
+
+  .btn-light:hover {
+    animation: animation-pulse-btn-carousel $animation-btn-time;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: $featured-carousel-button-bg;
+    height: 40px;
+
+    &:not(.noHover):hover {
+      color: $button-text !important;
+      background-color: $button-hover-bg;
+      text-decoration: none;
+      animation: animation-pulse-btn $animation-btn-time;
+    }
+  }
+}
